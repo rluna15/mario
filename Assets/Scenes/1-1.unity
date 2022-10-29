@@ -782,6 +782,7 @@ MonoBehaviour:
   jumpTime: 0.25
   defaultGravity: 4
   gravityMult: 5
+  jumpSFX: {fileID: 8300000, guid: 3bda9feb3670629468e67b738b4f050f, type: 3}
 --- !u!95 &1447220509
 Animator:
   serializedVersion: 4

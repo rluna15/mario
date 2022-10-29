@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D feetCollider;
     Animator animator;
 
+    [SerializeField] AudioClip jumpSFX;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,6 +52,8 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             jumpHoldTime = jumpTime;
             rb.velocity = new Vector2(rb.velocity.x, 1f * jumpForce);
+
+            AudioSource.PlayClipAtPoint(jumpSFX, Camera.main.transform.position);
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping)
