@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
 
     [SerializeField] AudioClip jumpSFX;
+    [SerializeField] AudioClip deathSFX;
 
     private void Start()
     {
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
             jumpHoldTime = jumpTime;
             rb.velocity = new Vector2(rb.velocity.x, 1f * jumpForce);
 
-            AudioSource.PlayClipAtPoint(jumpSFX, Camera.main.transform.position);
+            PlaySound(jumpSFX);
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping)
@@ -119,5 +120,18 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("onJump", true);
         }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
+    }
+
+    void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            PlaySound(deathSFX);
+        }    
     }
 }
