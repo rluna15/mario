@@ -135,6 +135,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             PlaySound(deathSFX);
+        }
+
+        if (other.gameObject.tag == "GrowShroom")
+        {
+            PlaySound(growSFX);
+            Destroy(other.gameObject);
         }    
     }
 }
