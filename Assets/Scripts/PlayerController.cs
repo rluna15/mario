@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
     [SerializeField] float jumpTime;
@@ -21,8 +22,10 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D feetCollider;
     Animator animator;
 
+    [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
     [SerializeField] AudioClip deathSFX;
+    [SerializeField] AudioClip growSFX;
 
     private void Start()
     {
