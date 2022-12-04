@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - GrowShroom
   - box
+  - Head
   layers:
   - Default
   - TransparentFX
