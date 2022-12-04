@@ -9,6 +9,7 @@ TagManager:
   - GrowShroom
   - box
   - Head
+  - Bricks
   layers:
   - Default
   - TransparentFX

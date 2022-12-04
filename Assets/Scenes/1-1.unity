@@ -6151,7 +6151,7 @@ GameObject:
   - component: {fileID: 398065176}
   m_Layer: 6
   m_Name: Bricks
-  m_TagString: Untagged
+  m_TagString: Bricks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6719,7 +6719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3262534, y: 7.00292, z: -10}
+  m_LocalPosition: {x: 4.337545, y: 7.00292, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7429,13 +7429,14 @@ GameObject:
   - component: {fileID: 1261317851}
   - component: {fileID: 1261317852}
   - component: {fileID: 1261317853}
+  - component: {fileID: 1261317854}
   m_Layer: 9
   m_Name: Head
   m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1261317850
 Transform:
   m_ObjectHideFlags: 0
@@ -7445,7 +7446,7 @@ Transform:
   m_GameObject: {fileID: 1261317849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5409, z: 0}
-  m_LocalScale: {x: 0.74177456, y: -0.16536872, z: 0.4972}
+  m_LocalScale: {x: 0.4863074, y: -0.16536872, z: 0.4972}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1447220506}
@@ -7541,6 +7542,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afbe85529d29a74d9e8e68a39ce3e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1261317854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261317849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75aa93c1ddade0645934063da83c5808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 256949871}
+  tilemap: {fileID: 398065180}
 --- !u!1 &1370096501
 GameObject:
   m_ObjectHideFlags: 0
