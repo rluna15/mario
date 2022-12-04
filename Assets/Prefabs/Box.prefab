@@ -146,9 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9553d0f2660e74f9d7ec6914e24fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 0}
-  growShroom: {fileID: 0}
+  coin: {fileID: 3427620735825118321, guid: 5a8ed0576010ad745b49a5444a8d6db6, type: 3}
+  growShroom: {fileID: 4978643905483605371, guid: ce2cfed6ecdf326468e755993a5dc6a5, type: 3}
   fireFlower: {fileID: 0}
+  disabledSprite: {fileID: 673287220, guid: 94b3493bc87dfcc4ea46140682de9724, type: 3}
   isCoin: 0
+  isMultiCoin: 0
+  hitCount: 0
   isGrowShroom: 0
   isFireFlower: 0

@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4978643905483605375
 Transform:
   m_ObjectHideFlags: 0
@@ -145,8 +145,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
-  m_Material: {fileID: 0}
+  m_GravityScale: 45
+  m_Material: {fileID: 6200000, guid: 1c4ed6cbe09c70b42840937ffe676ee3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63101ef2caed1d4cadea95f4d6ba585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   growShroom: 1
   fireFlower: 0
   powerStar: 0
