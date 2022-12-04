@@ -132,6 +132,11 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) 
     {
+        if (other.gameObject.tag == "box" || other.gameObject.tag == "Bricks")
+        {
+            isJumping = false;
+        }
+
         if (other.gameObject.tag == "Enemy")
         {
             PlaySound(deathSFX);
