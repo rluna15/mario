@@ -713,7 +713,7 @@ TextureImporter:
         width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -734,7 +734,7 @@ TextureImporter:
         width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -755,7 +755,7 @@ TextureImporter:
         width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -763,6 +763,216 @@ TextureImporter:
       bones: []
       spriteID: 059fc3406d282104e9ecc770f5867343
       internalID: -950244593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 732
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19533dc76e2f91b44950009b966e336e
+      internalID: 2109718790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 732
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b19560e282d373448b560a22b681544
+      internalID: 568981795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 732
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1987a66f3a970d04383d22f78b6f6daa
+      internalID: -1568473959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ceb3c426d1ab6488e0b0ffd06a4458
+      internalID: 1401398619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 501
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7045c9883aeccd1479159c8488467f45
+      internalID: -265705397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f4e34233043d147858865deceffafb
+      internalID: -1695211282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_37
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 501
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b02a33c5875464492332034dcab80c
+      internalID: -836679844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_38
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 501
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275f7c96164a0ed499086bc655dd40ca
+      internalID: -1051721365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_39
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8526335502cc94ea4a8278b4939700
+      internalID: 1465393155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Tileset_40
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 535
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7a629da5571d54ca3c423b7de4fce7
+      internalID: 468436791
       vertices: []
       indices: 
       edges: []
@@ -780,15 +990,19 @@ TextureImporter:
     nameFileIdTable:
       NES - Super Mario Bros - Tileset_17: -1370435748
       NES - Super Mario Bros - Tileset_28: 1833035
+      NES - Super Mario Bros - Tileset_39: 1465393155
       NES - Super Mario Bros - Tileset_3: -2010831151
       NES - Super Mario Bros - Tileset_5: 222611658
       NES - Super Mario Bros - Tileset_21: 88619819
       NES - Super Mario Bros - Tileset_23: 23975376
+      NES - Super Mario Bros - Tileset_37: -836679844
       NES - Super Mario Bros - Tileset_27: 284375186
       NES - Super Mario Bros - Tileset_20: 118733038
       NES - Super Mario Bros - Tileset_24: 1810718483
       NES - Super Mario Bros - Tileset_7: -1320690483
+      NES - Super Mario Bros - Tileset_32: 568981795
       NES - Super Mario Bros - Tileset_22: 1811766671
+      NES - Super Mario Bros - Tileset_36: -1695211282
       NES - Super Mario Bros - Tileset_13: 347580554
       NES - Super Mario Bros - Tileset_26: -1555147349
       NES - Super Mario Bros - Tileset_9: 1339090605
@@ -801,13 +1015,19 @@ TextureImporter:
       NES - Super Mario Bros - Tileset_18: -1125110578
       NES - Super Mario Bros - Tileset_12: 607954476
       NES - Super Mario Bros - Tileset_4: 787338369
+      NES - Super Mario Bros - Tileset_40: 468436791
       NES - Super Mario Bros - Tileset_30: -27111188
+      NES - Super Mario Bros - Tileset_38: -1051721365
       NES - Super Mario Bros - Tileset_14: -1995341170
       NES - Super Mario Bros - Tileset_1: 1370606211
+      NES - Super Mario Bros - Tileset_35: -265705397
+      NES - Super Mario Bros - Tileset_34: 1401398619
+      NES - Super Mario Bros - Tileset_31: 2109718790
       NES - Super Mario Bros - Tileset_11: 1922202393
       NES - Super Mario Bros - Tileset_19: -258806750
       NES - Super Mario Bros - Tileset_16: -1388373438
       NES - Super Mario Bros - Tileset_15: 838290463
+      NES - Super Mario Bros - Tileset_33: -1568473959
       NES - Super Mario Bros - Tileset_0: -1230703164
   spritePackingTag: 
   pSDRemoveMatte: 0

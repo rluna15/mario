@@ -21,17 +21,23 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     BoxCollider2D feetCollider;
     Animator animator;
+    SpriteRenderer sp;
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
     [SerializeField] AudioClip deathSFX;
     [SerializeField] AudioClip growSFX;
 
+    [Header("Sprites")]
+    [SerializeField] Sprite small;
+    [SerializeField] Sprite big;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         feetCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        sp = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -145,6 +151,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "GrowShroom")
         {
             PlaySound(growSFX);
+            sp.sprite = big;
             Destroy(other.gameObject);
         }    
     }
