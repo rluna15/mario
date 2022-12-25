@@ -6,11 +6,15 @@ using Cinemachine;
 public class Warp : MonoBehaviour
 {
     [SerializeField] float warpDelay;
-    [SerializeField] Transform warpTarget;
+    [SerializeField] float lensSize;
+    [Tooltip("Warp to a different map with different camera bounds")]
+    [SerializeField] bool differentLoc;
 
     [Header("Objects")]
     [SerializeField] GameObject player;
+    [SerializeField] Transform warpInTarget;
     [SerializeField] Transform warpOut;
+    [SerializeField] Transform warpOutTarget;
 
     [Header("Follow Camera")]
     [SerializeField] GameObject followCam;
@@ -27,6 +31,7 @@ public class Warp : MonoBehaviour
 
     bool inWarp = false;
     bool canWarp = false;
+    bool endWarp = false;
 
     void Start()
     {
@@ -56,6 +61,11 @@ public class Warp : MonoBehaviour
         {
             RunWarp();
         }
+
+        if (endWarp)
+        {
+            EndWarp();
+        }
     }
 
     void RunWarp()
@@ -66,23 +76,40 @@ public class Warp : MonoBehaviour
         boxCollider2D.enabled = false;
 
         var speed = warpDelay * Time.deltaTime;
-        player.transform.position = Vector3.MoveTowards(player.transform.position, warpTarget.transform.position, speed);
+        player.transform.position = Vector3.MoveTowards(player.transform.position, warpInTarget.transform.position, speed);
 
-        if (player.transform.position == warpTarget.transform.position)
+        if (player.transform.position == warpInTarget.transform.position)
         {
             Debug.Log("Reached target");
 
             player.transform.position = warpOut.transform.position;
             canWarp = false;
+            endWarp = true;
+
+            if (differentLoc)
+            {
+                cinemachineConfiner.m_BoundingShape2D = newCameraBounds;
+                cinemachineVirtualCamera.m_Lens.OrthographicSize = lensSize;
+            }
+
+        }
+
+    }
+
+    void EndWarp()
+    {
+        var speed = warpDelay * Time.deltaTime;
+        player.transform.position = Vector3.MoveTowards(player.transform.position, warpOutTarget.transform.position, speed);
+
+        if (player.transform.position == warpOutTarget.transform.position)
+        {
             myRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
             capsuleCollider2D.enabled = true;
             boxCollider2D.enabled = true;
             playerController.EnableMovement();
 
-            cinemachineConfiner.m_BoundingShape2D = newCameraBounds;
-            cinemachineVirtualCamera.m_Lens.OrthographicSize = 8;
+            endWarp = false;
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
