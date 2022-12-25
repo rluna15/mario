@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     bool isJumping;
     bool isMoving;
+    bool canMove = true;
 
     Rigidbody2D rb;
     BoxCollider2D feetCollider;
@@ -43,9 +44,14 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        Move();
-        Jump();
-        Animate();
+
+        if (canMove)
+        {
+            Move();
+            Jump();
+            Animate();
+        }
+
     }
 
     void Move() 
@@ -129,6 +135,21 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("onJump", true);
         }
+    }
+
+    public void EnableMovement()
+    {
+        canMove = true;
+    }
+
+    public void DisableMovement()
+    {
+        canMove = false;
+    }
+
+    public bool GetCanMove()
+    {
+        return canMove;
     }
 
     void PlaySound(AudioClip clip)
