@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Warp : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class Warp : MonoBehaviour
     Rigidbody2D myRigidbody2D;
     BoxCollider2D boxCollider2D;
 
+    CinemachineConfiner cinemachineConfiner;
+    CinemachineVirtualCamera cinemachineVirtualCamera;
+
     bool inWarp = false;
     bool canWarp = false;
 
@@ -30,6 +34,9 @@ public class Warp : MonoBehaviour
         capsuleCollider2D = player.GetComponent<CapsuleCollider2D>();
         myRigidbody2D = player.GetComponent<Rigidbody2D>();
         boxCollider2D = player.GetComponent<BoxCollider2D>();
+
+        cinemachineConfiner = followCam.GetComponent<CinemachineConfiner>();
+        cinemachineVirtualCamera = followCam.GetComponent<CinemachineVirtualCamera>();
     }
 
     void Update()
@@ -71,6 +78,9 @@ public class Warp : MonoBehaviour
             capsuleCollider2D.enabled = true;
             boxCollider2D.enabled = true;
             playerController.EnableMovement();
+
+            cinemachineConfiner.m_BoundingShape2D = newCameraBounds;
+            cinemachineVirtualCamera.m_Lens.OrthographicSize = 8;
         }
 
     }

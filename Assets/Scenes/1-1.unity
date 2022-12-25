@@ -720,9 +720,9 @@ MonoBehaviour:
   warpTarget: {fileID: 1726040655}
   player: {fileID: 1447220502}
   warpOut: {fileID: 1294427213}
-  followCam: {fileID: 0}
-  origianlCameraBounds: {fileID: 0}
-  newCameraBounds: {fileID: 0}
+  followCam: {fileID: 906014065}
+  origianlCameraBounds: {fileID: 1835610090}
+  newCameraBounds: {fileID: 1865470669}
 --- !u!61 &298014701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7838,7 +7838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.958977, y: 7.0033636, z: -10}
+  m_LocalPosition: {x: 48.958977, y: 7.00333, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
