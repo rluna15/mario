@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
         rb.velocity = new Vector2(moveSpeed, 0);
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player")
         {
