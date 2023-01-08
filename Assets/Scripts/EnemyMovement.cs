@@ -33,7 +33,6 @@ public class EnemyMovement : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(moveSpeed, 0);
-        Debug.Log(Mathf.Sign(rb.velocity.x));
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -47,7 +46,6 @@ public class EnemyMovement : MonoBehaviour
 
     void FlipSprite()
     {
-        Debug.Log(Mathf.Sign(rb.velocity.x));
         transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), 1f);
     }
 }
