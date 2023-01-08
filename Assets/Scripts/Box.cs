@@ -17,6 +17,10 @@ public class Box : MonoBehaviour
     [SerializeField] bool isGrowShroom;
     [SerializeField] bool isFireFlower;
 
+    [Header("Score Callouts")]
+    [SerializeField] float calloutDeath;
+    [SerializeField] GameObject callout100;
+
     bool isHit = false;
 
     Object obj;
@@ -40,7 +44,8 @@ public class Box : MonoBehaviour
             sp.sprite = disabledSprite;
             obj = Instantiate(coin, position, Quaternion.identity);
             Destroy(obj, 0.3f);
-            Debug.Log("Show Coin.");
+
+            CreateCallout();
         }
 
         if (isMultiHit && !isHit)
@@ -53,6 +58,8 @@ public class Box : MonoBehaviour
             {
                 isHit = true;
                 sp.sprite = disabledSprite;
+
+                CreateCallout();
             }
         }
         
@@ -71,5 +78,11 @@ public class Box : MonoBehaviour
             sp.sprite = disabledSprite;
             Debug.Log("Show FireFlower.");
         }
+    }
+
+    void CreateCallout()
+    {
+        obj = Instantiate(callout100, position, Quaternion.identity);
+        Destroy(obj, calloutDeath);
     }
 }
