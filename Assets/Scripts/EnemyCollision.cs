@@ -6,6 +6,7 @@ public class EnemyCollision : MonoBehaviour
 {
     [SerializeField] BoxCollider2D headCollider;
     [SerializeField] GameObject player;
+    [SerializeField] Animator animator;
 
     EnemyMovement enemyMovement;
 
@@ -13,7 +14,6 @@ public class EnemyCollision : MonoBehaviour
     Rigidbody2D myRigidBody2D;
 
     bool isTouching;
-    bool isDead = false;
 
     void Start()
     {
@@ -30,11 +30,7 @@ public class EnemyCollision : MonoBehaviour
         {
             enemyMovement.enabled = false;
             myRigidBody2D.bodyType = RigidbodyType2D.Static;
-            isDead = true;
+            animator.SetBool("isDead", true);
         }
-    }
-
-    public bool GetStatus() {
-        return isDead;
     }
 }
