@@ -10,13 +10,16 @@ public class EnemyCollision : MonoBehaviour
     EnemyMovement enemyMovement;
 
     BoxCollider2D feetCollider;
+    Rigidbody2D myRigidBody2D;
 
     bool isTouching;
+    bool isDead = false;
 
     void Start()
     {
         feetCollider = player.GetComponent<BoxCollider2D>();
         enemyMovement = GetComponent<EnemyMovement>();
+        myRigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -26,7 +29,12 @@ public class EnemyCollision : MonoBehaviour
         if (isTouching)
         {
             enemyMovement.enabled = false;
-            Debug.Log("killed by player");
+            myRigidBody2D.bodyType = RigidbodyType2D.Static;
+            isDead = true;
         }
+    }
+
+    public bool GetStatus() {
+        return isDead;
     }
 }

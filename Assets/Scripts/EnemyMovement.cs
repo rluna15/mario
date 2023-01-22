@@ -10,11 +10,13 @@ public class EnemyMovement : MonoBehaviour
 
     Rigidbody2D rb;
     BoxCollider2D boxCollider2D;
+    EnemyCollision enemyCollision;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        enemyCollision = GetComponent<EnemyCollision>();
     }
 
     void Update()
@@ -28,6 +30,8 @@ public class EnemyMovement : MonoBehaviour
         {
             animator.enabled = false;
         }
+
+        Debug.Log(enemyCollision.GetStatus());
     }
 
     void Move()
