@@ -12,6 +12,7 @@ public class EnemyCollision : MonoBehaviour
 
     BoxCollider2D feetCollider;
     Rigidbody2D myRigidBody2D;
+    Rigidbody2D playerRigidBody2D;
 
     bool isTouching;
 
@@ -20,6 +21,7 @@ public class EnemyCollision : MonoBehaviour
         feetCollider = player.GetComponent<BoxCollider2D>();
         enemyMovement = GetComponent<EnemyMovement>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
+        playerRigidBody2D = player.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -31,6 +33,8 @@ public class EnemyCollision : MonoBehaviour
             enemyMovement.enabled = false;
             myRigidBody2D.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
+            playerRigidBody2D.velocity = new Vector2(0, 14f);
+            Destroy(gameObject, 0.2f);
         }
     }
 }
