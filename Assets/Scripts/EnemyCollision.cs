@@ -9,6 +9,7 @@ public class EnemyCollision : MonoBehaviour
     [SerializeField] Animator animator;
 
     EnemyMovement enemyMovement;
+    PlayerController playerController;
 
     BoxCollider2D feetCollider;
     Rigidbody2D myRigidBody2D;
@@ -22,6 +23,7 @@ public class EnemyCollision : MonoBehaviour
         enemyMovement = GetComponent<EnemyMovement>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
         playerRigidBody2D = player.GetComponent<Rigidbody2D>();
+        playerController = player.GetComponent<PlayerController>();
     }
 
     void Update()
@@ -30,6 +32,7 @@ public class EnemyCollision : MonoBehaviour
 
         if (isTouching)
         {
+            playerController.killedEnemy();
             enemyMovement.enabled = false;
             myRigidBody2D.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);

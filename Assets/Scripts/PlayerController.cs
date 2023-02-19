@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Sprite small;
     [SerializeField] Sprite big;
 
+    [Header("Enemy Conditions")]
+    [SerializeField] bool enemyKilled = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -166,7 +169,10 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
-            PlaySound(deathSFX);
+            if (!enemyKilled)
+            {
+                PlaySound(deathSFX);
+            }
         }
 
         if (other.gameObject.tag == "GrowShroom")
@@ -175,5 +181,10 @@ public class PlayerController : MonoBehaviour
             sp.sprite = big;
             Destroy(other.gameObject);
         }    
+    }
+
+    public void killedEnemy()
+    {
+        enemyKilled = true;
     }
 }

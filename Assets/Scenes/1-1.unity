@@ -9738,6 +9738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headCollider: {fileID: 741132071}
+  mainCollider: {fileID: 0}
   player: {fileID: 1447220502}
   animator: {fileID: 0}
 --- !u!1001 &1378658447
@@ -10183,6 +10184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headCollider: {fileID: 2023020788}
+  mainCollider: {fileID: 2140743469}
   player: {fileID: 1447220502}
   animator: {fileID: 2140743472}
 --- !u!4 &1489038900 stripped
