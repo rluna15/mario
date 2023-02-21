@@ -172,6 +172,7 @@ public class PlayerController : MonoBehaviour
             if (!enemyKilled)
             {
                 PlaySound(deathSFX);
+                animator.SetBool("onDeath", true);
             }
         }
 
