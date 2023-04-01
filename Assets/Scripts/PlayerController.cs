@@ -169,11 +169,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
-            if (!enemyKilled)
-            {
-                PlaySound(deathSFX);
-                animator.SetBool("onDeath", true);
-            }
+            PlaySound(deathSFX);
+            animator.SetBool("onDeath", true);
         }
 
         if (other.gameObject.tag == "GrowShroom")
