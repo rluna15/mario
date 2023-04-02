@@ -7858,7 +7858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.529975, y: 7.0029917, z: -10}
+  m_LocalPosition: {x: 11.529973, y: 7.0029593, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9768,6 +9768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2df7e5c8581ccb48a2115dd5eb09234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   rb: {fileID: 0}
   enemyMovement: {fileID: 0}
   animator: {fileID: 0}
@@ -9905,7 +9906,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5863923, y: 0.090548754}
+  m_Size: {x: 0.71, y: 0.27}
   m_EdgeRadius: 0
 --- !u!212 &1447220505
 SpriteRenderer:
@@ -10116,7 +10117,6 @@ GameObject:
   - component: {fileID: 1475293482}
   - component: {fileID: 1475293483}
   - component: {fileID: 1475293481}
-  - component: {fileID: 1475293484}
   m_Layer: 0
   m_Name: Goopa
   m_TagString: Enemy
@@ -10202,21 +10202,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6133573, y: 0.12655479}
   m_EdgeRadius: 0
---- !u!114 &1475293484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475293479}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2df7e5c8581ccb48a2115dd5eb09234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  enemyMovement: {fileID: 0}
-  animator: {fileID: 2140743472}
 --- !u!4 &1489038900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3427620735825118332, guid: 5a8ed0576010ad745b49a5444a8d6db6, type: 3}
@@ -14510,7 +14495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2df7e5c8581ccb48a2115dd5eb09234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1475293482}
+  enemy: {fileID: 1475293479}
+  rb: {fileID: 1447220503}
   enemyMovement: {fileID: 1475293481}
   animator: {fileID: 2140743472}
 --- !u!1001 &2023026049

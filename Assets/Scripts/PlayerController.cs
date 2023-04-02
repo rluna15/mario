@@ -57,9 +57,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Move() 
+    void Move()
     {
-        rb.velocity = new Vector2( moveInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
     }
 
     void Jump()
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.gravityScale = gravityMult;
         }
-        else 
+        else
         {
             rb.gravityScale = defaultGravity;
         }
@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("onJump", true);
             transform.localScale = new Vector2(Mathf.Sign(rb.velocity.x), 1f);
         }
-        else 
+        else
         {
             animator.SetBool("onJump", false);
         }
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("onJump", false);
         }
-        else 
+        else
         {
             animator.SetBool("onJump", true);
         }
@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
         AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
     }
 
-    void OnCollisionEnter2D(Collision2D other) 
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "box" || other.gameObject.tag == "Bricks")
         {
@@ -169,8 +169,15 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
-            PlaySound(deathSFX);
-            animator.SetBool("onDeath", true);
+            if (!enemyKilled)
+            {
+                PlaySound(deathSFX);
+                animator.SetBool("onDeath", true);
+            }
+            else
+            {
+                enemyKilled = false;
+            }
         }
 
         if (other.gameObject.tag == "GrowShroom")
@@ -178,7 +185,7 @@ public class PlayerController : MonoBehaviour
             PlaySound(growSFX);
             sp.sprite = big;
             Destroy(other.gameObject);
-        }    
+        }
     }
 
     public void killedEnemy()
