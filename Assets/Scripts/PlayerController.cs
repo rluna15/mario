@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D feetCollider;
     Animator animator;
     SpriteRenderer sp;
+    AudioManager audioManager;
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         feetCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
+        audioManager = GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -72,7 +74,9 @@ public class PlayerController : MonoBehaviour
             jumpHoldTime = jumpTime;
             rb.velocity = new Vector2(rb.velocity.x, 1f * jumpForce);
 
-            PlaySound(jumpSFX);
+            // PlaySound(jumpSFX);
+            audioManager.PlayJump();
+            
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping)
@@ -182,7 +186,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "GrowShroom")
         {
-            PlaySound(growSFX);
+            // PlaySound(growSFX);
+            audioManager.PlayGrowShroom();
             sp.sprite = big;
             Destroy(other.gameObject);
         }
