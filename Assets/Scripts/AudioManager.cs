@@ -4,70 +4,28 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioClip jumpSFX;
-    [SerializeField] AudioClip coinSFX;
-    [SerializeField] AudioClip deathSFX;
-    [SerializeField] AudioClip growShroomSFX;
-
-    AudioSource audioSource;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
+    [SerializeField] GameObject coinSFX;
+    [SerializeField] GameObject jumpSFX;
+    [SerializeField] GameObject deathSFX;
+    [SerializeField] GameObject growShroomSFX;
 
     public void PlayJump()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(jumpSFX);
-        }
-        else
-        {
-            audioSource.PlayOneShot(jumpSFX);
-        }
+        Instantiate(jumpSFX);
     }
 
     public void PlayDeath()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(deathSFX);
-        }
-        else
-        {
-            audioSource.PlayOneShot(deathSFX);
-        }
+        Instantiate(deathSFX);
     }
 
     public void PlayCoin()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(coinSFX);
-        }
-        else
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(coinSFX);
-        }
+        Instantiate(coinSFX);
     }
 
     public void PlayGrowShroom()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(growShroomSFX);
-        }
-        else
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(growShroomSFX);
-        }
+        Instantiate(growShroomSFX);
     }
 }
