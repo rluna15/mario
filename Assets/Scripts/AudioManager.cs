@@ -19,49 +19,55 @@ public class AudioManager : MonoBehaviour
 
     public void PlayJump()
     {
-        if (!audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(jumpSFX);
         }
         else
         {
-            audioSource.Stop();
+            audioSource.PlayOneShot(jumpSFX);
         }
     }
 
     public void PlayDeath()
     {
-        if (!audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(deathSFX);
         }
         else
         {
-            audioSource.Stop();
+            audioSource.PlayOneShot(deathSFX);
         }
     }
 
     public void PlayCoin()
     {
-        if (!audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(coinSFX);
         }
         else
         {
             audioSource.Stop();
+            audioSource.PlayOneShot(coinSFX);
         }
     }
 
     public void PlayGrowShroom()
     {
-        if (!audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(growShroomSFX);
         }
         else
         {
             audioSource.Stop();
+            audioSource.PlayOneShot(growShroomSFX);
         }
     }
 }

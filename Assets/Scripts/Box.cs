@@ -71,4 +71,24 @@ public class Box : MonoBehaviour
             Debug.Log("Show FireFlower.");
         }
     }
+
+    public bool GetHit()
+    {
+        return isHit;
+    }
+
+    public bool GetCoin()
+    {
+        return isCoin;
+    }
+
+    public bool GetGrowShroom()
+    {
+        return isGrowShroom;
+    }
+
+    public bool GetFireFlowing()
+    {
+        return isFireFlower;
+    }
 }

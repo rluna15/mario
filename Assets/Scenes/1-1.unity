@@ -7827,7 +7827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.529973, y: 7.0029593, z: -10}
+  m_LocalPosition: {x: 11.529975, y: 7.002992, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9335,6 +9335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afbe85529d29a74d9e8e68a39ce3e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1447220510}
 --- !u!114 &1261317854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10018,9 +10019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57535f71d6fa0a747960055b898d6fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSFX: {fileID: 8300000, guid: 3bda9feb3670629468e67b738b4f050f, type: 3}
-  coinSFX: {fileID: 8300000, guid: 234ce78fd8f53eb4e87cd1389b73001c, type: 3}
-  deathSFX: {fileID: 8300000, guid: 5a50301bf36571c4fb7aca6aa70e84fc, type: 3}
+  jumpSFX: {fileID: 8300000, guid: 0d881f84bc23ef340883268627299cfb, type: 3}
+  coinSFX: {fileID: 8300000, guid: b85463d9ff8e5e842be3b4392bec58b3, type: 3}
+  deathSFX: {fileID: 8300000, guid: 2eb41aa9cbb58ee4aa40481994496f6c, type: 3}
   growShroomSFX: {fileID: 8300000, guid: f304c568a5009bb4fa19debae8c03f25, type: 3}
 --- !u!82 &1447220511
 AudioSource:

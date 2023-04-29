@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoxCollision : MonoBehaviour
 {
+    [SerializeField] AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,12 @@ public class BoxCollision : MonoBehaviour
         if (other.gameObject.tag == "box")
         {
             Box box = other.gameObject.GetComponent<Box>();
+
+            if (box.GetCoin() && !box.GetHit())
+            {
+                audioManager.PlayCoin();
+            }
+
             box.ShowItem();
         }
     }
