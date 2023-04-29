@@ -159,11 +159,6 @@ public class PlayerController : MonoBehaviour
         return canMove;
     }
 
-    void PlaySound(AudioClip clip)
-    {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
-    }
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "box" || other.gameObject.tag == "Bricks")
@@ -175,7 +170,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!enemyKilled)
             {
-                PlaySound(deathSFX);
+                audioManager.PlayDeath();
                 animator.SetBool("onDeath", true);
             }
             else
@@ -196,5 +191,6 @@ public class PlayerController : MonoBehaviour
     public void killedEnemy()
     {
         enemyKilled = true;
+        audioManager.PlaySquish();
     }
 }
