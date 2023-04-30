@@ -10024,6 +10024,7 @@ MonoBehaviour:
   deathSFX: {fileID: 7702533060196699717, guid: 8736df428c57b564ebe3ec74655ffc2d, type: 3}
   growShroomSFX: {fileID: 7702533060196699717, guid: b04a1b4eeaff2dd46a01228da12f5b7e, type: 3}
   squishSFX: {fileID: 7702533060196699717, guid: 5961dbd5fd1fb9144b796e01f9879a55, type: 3}
+  warpSFX: {fileID: 7702533060196699717, guid: 7b848256211f9da47910434638183287, type: 3}
 --- !u!82 &1447220511
 AudioSource:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class Warp : MonoBehaviour
     CapsuleCollider2D capsuleCollider2D;
     Rigidbody2D myRigidbody2D;
     BoxCollider2D boxCollider2D;
+    AudioManager audioManager;
 
     CinemachineConfiner cinemachineConfiner;
     CinemachineVirtualCamera cinemachineVirtualCamera;
@@ -32,6 +33,7 @@ public class Warp : MonoBehaviour
     bool inWarp = false;
     bool canWarp = false;
     bool endWarp = false;
+    bool playingSFX = false;
 
     void Start()
     {
@@ -53,7 +55,7 @@ public class Warp : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S) && inWarp)
         {
-            Debug.Log("Start warp");
+            audioManager.PlayWarp();
             canWarp = true;
         }
 
@@ -98,6 +100,12 @@ public class Warp : MonoBehaviour
 
     void EndWarp()
     {
+        if (!playingSFX)
+        {
+            audioManager.PlayWarp();
+            playingSFX = true;
+        }
+
         var speed = warpDelay * Time.deltaTime;
         player.transform.position = Vector3.MoveTowards(player.transform.position, warpOutTarget.transform.position, speed);
 
@@ -109,6 +117,7 @@ public class Warp : MonoBehaviour
             playerController.EnableMovement();
 
             endWarp = false;
+            playingSFX = false;
         }
     }
 
@@ -117,6 +126,7 @@ public class Warp : MonoBehaviour
         if (other.tag == "Player")
         {
             inWarp = true;
+            audioManager = other.gameObject.GetComponent<AudioManager>();
             Debug.Log("in warp");
         }
     }
