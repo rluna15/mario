@@ -29,6 +29,12 @@ public class BoxCollision : MonoBehaviour
                 audioManager.PlayCoin();
             }
 
+            if (box.GetHit())
+            {
+                audioManager.PlayBump();
+            }
+
+
             box.ShowItem();
         }
     }

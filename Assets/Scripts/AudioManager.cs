@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] GameObject growShroomSFX;
     [SerializeField] GameObject squishSFX;
     [SerializeField] GameObject warpSFX;
+    [SerializeField] GameObject brickBreakSFX;
+    [SerializeField] GameObject bumpSFX;
 
     public void PlayJump()
     {
@@ -39,5 +41,15 @@ public class AudioManager : MonoBehaviour
     public void PlayWarp()
     {
         Instantiate(warpSFX);
+    }
+
+    public void PlayBrickBreak()
+    {
+        Instantiate(brickBreakSFX);
+    }
+
+    public void PlayBump()
+    {
+        Instantiate(bumpSFX);
     }
 }
