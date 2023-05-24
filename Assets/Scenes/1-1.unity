@@ -8196,7 +8196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.819977, y: 7.0031404, z: -10}
+  m_LocalPosition: {x: 15.509928, y: 7.0029984, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9177,7 +9177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906014065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.82, y: 4.508, z: -10}
+  m_LocalPosition: {x: 15.51, y: -0.44, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9842,6 +9842,7 @@ MonoBehaviour:
   grid: {fileID: 256949871}
   tilemap: {fileID: 398065180}
   audioManager: {fileID: 1447220510}
+  brickParticles: {fileID: 7850729373318780362, guid: 0d9b0c847298c58468bd00d1be4eb3ae, type: 3}
 --- !u!4 &1281505227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6364077012878432263, guid: a3e7e629da7f05042b9015ba78197d6a, type: 3}
@@ -10529,7 +10530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447220502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.82, y: 4.508, z: 0}
+  m_LocalPosition: {x: 15.51, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

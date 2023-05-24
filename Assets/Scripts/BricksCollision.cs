@@ -10,6 +10,8 @@ public class BricksCollision : MonoBehaviour
 
     [SerializeField] AudioManager audioManager;
 
+    [SerializeField] GameObject brickParticles;
+
     Vector3 playerPos;
     Vector3 tilePos;
     Vector3 posOffset = new Vector3(0, 0.5f, 0);
@@ -35,7 +37,7 @@ public class BricksCollision : MonoBehaviour
             
             Vector3Int position = grid.WorldToCell(tilePos);
             tilemap.SetTile(position, null);
-
+            Instantiate(brickParticles, tilePos, brickParticles.transform.rotation);
             audioManager.PlayBrickBreak();
         }
     }
