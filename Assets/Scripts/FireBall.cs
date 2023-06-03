@@ -6,7 +6,6 @@ public class FireBall : MonoBehaviour
 {
 
     [SerializeField] float collisionCount = 3f;
-    [SerializeField] Vector2 velocity = new Vector2(10f, 0);
 
     Animator animator;
     Rigidbody2D rb2D;
@@ -15,8 +14,6 @@ public class FireBall : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
-
-        rb2D.centerOfMass = velocity;
     }
 
     void Update()
