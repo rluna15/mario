@@ -31,10 +31,11 @@ public class Powerup : MonoBehaviour
         transform.localScale = new Vector2(-(Math.Sign(rb.velocity.x)), 1f);
     }
 
-    void OnTriggerExit2D(Collider2D other) 
+    void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.tag != "Player" || other.tag != "Enemy")
         {
+            moveSpeed = -moveSpeed;
             FlipSprite();
         }    
     }

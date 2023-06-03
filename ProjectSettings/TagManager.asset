@@ -10,6 +10,7 @@ TagManager:
   - box
   - Head
   - Bricks
+  - Ground
   layers:
   - Default
   - TransparentFX
