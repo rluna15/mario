@@ -10619,6 +10619,7 @@ MonoBehaviour:
   brickBreakSFX: {fileID: 7702533060196699717, guid: c2761cfb2fda9ef45a931f7ef8880fd5, type: 3}
   bumpSFX: {fileID: 7702533060196699717, guid: 19892aca264f9dd43a1a3042857d68be, type: 3}
   fireballSFX: {fileID: 7702533060196699717, guid: e4ecb97605d238349b0e8be7235712cc, type: 3}
+  kickSFX: {fileID: 7702533060196699717, guid: 053eb1f3097981645befbaa9860b016f, type: 3}
 --- !u!82 &1447220511
 AudioSource:
   m_ObjectHideFlags: 0

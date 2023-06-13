@@ -34,7 +34,6 @@ public class FireBall : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Enemy")
         {
             collisionCount = 0f;

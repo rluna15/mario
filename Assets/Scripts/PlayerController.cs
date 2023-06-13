@@ -188,9 +188,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void killedEnemy()
+    public void killedEnemy(string killedWith)
     {
-        enemyKilled = true;
-        audioManager.PlaySquish();
+        switch (killedWith)
+        {
+            case "Jump":
+                enemyKilled = true;
+                audioManager.PlaySquish();
+                break;
+            case "FireBall":
+                audioManager.PlayKick();
+                break;
+            default:
+                break;
+        }
+
     }
 }

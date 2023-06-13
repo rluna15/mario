@@ -12,7 +12,7 @@ public class EnemyCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         enemyMovement.enabled = false;
-        other.gameObject.GetComponent<PlayerController>().killedEnemy();
+        other.gameObject.GetComponent<PlayerController>().killedEnemy("Jump");
         other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 14f);
         animator.SetBool("isDead", true);
         Destroy(enemy, 0.2f);

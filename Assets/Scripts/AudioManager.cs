@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] GameObject brickBreakSFX;
     [SerializeField] GameObject bumpSFX;
     [SerializeField] GameObject fireballSFX;
+    [SerializeField] GameObject kickSFX;
 
     public void PlayJump()
     {
@@ -57,5 +58,10 @@ public class AudioManager : MonoBehaviour
     public void PlayFireball()
     {
         Instantiate(fireballSFX);
+    }
+
+    public void PlayKick()
+    {
+        Instantiate(kickSFX);
     }
 }

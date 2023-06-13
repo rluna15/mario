@@ -8,6 +8,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Animator animator;
 
+    bool canMove = true;
+
     Rigidbody2D rb;
     BoxCollider2D boxCollider2D;
 
@@ -19,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if (rb.IsTouchingLayers(LayerMask.GetMask("Ground")) == true)
+        if (rb.IsTouchingLayers(LayerMask.GetMask("Ground")) == true && canMove)
         {
             animator.enabled = true;
             Move();
@@ -37,6 +39,18 @@ public class EnemyMovement : MonoBehaviour
         {
             moveSpeed = -moveSpeed;
             FlipSprite();
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.GetComponent<FireBall>()) 
+        {
+            FindObjectOfType<PlayerController>().killedEnemy("FireBall");
+            // rb.isKinematic = true;
+            rb.bodyType = RigidbodyType2D.Static;
+            canMove = false;
+            animator.enabled = false;
         }
     }
 
