@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "todo-tree.tree.showBadges": true
+    "todo-tree.tree.showBadges": true,
+    "dotnet.defaultSolution": "mario.sln"
 }
