@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6016628800454033436}
   - component: {fileID: 6016628800454033438}
-  - component: {fileID: 6016628800454033439}
   m_Layer: 0
   m_Name: Warp-In
   m_TagString: Untagged
@@ -93,28 +92,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6016628800454033439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016628800454033437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb6c640b145dec4f9b93e8519aae55d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warpDelay: 0
-  lensSize: 0
-  differentLoc: 0
-  player: {fileID: 0}
-  warpInTarget: {fileID: 6016628800650970041}
-  warpOut: {fileID: 6016628799865121816}
-  warpOutTarget: {fileID: 6016628800931302213}
-  followCam: {fileID: 0}
-  origianlCameraBounds: {fileID: 0}
-  newCameraBounds: {fileID: 0}
 --- !u!1 &6016628800650970046
 GameObject:
   m_ObjectHideFlags: 0
