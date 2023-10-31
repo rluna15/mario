@@ -11673,6 +11673,7 @@ GameObject:
   - component: {fileID: 1977045652}
   - component: {fileID: 1977045654}
   - component: {fileID: 1977045653}
+  - component: {fileID: 1977045655}
   m_Layer: 0
   m_Name: Small Mario
   m_TagString: Untagged
@@ -11767,6 +11768,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1977045655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977045651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957080e85974a0145a358a6710f50eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2054357540
 GameObject:
   m_ObjectHideFlags: 0
