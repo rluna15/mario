@@ -45,14 +45,14 @@ public class PlayerMovement : MonoBehaviour
     {
         float jumpInput = inputManager.GetJumpInput();
 
-        if (jumpInput > 0 && isGrounded)
+        if (jumpInput > 0 && !isGrounded)
         {
             isJumping = true;
             jumpHoldTime = jumpTime;
             rb.velocity = new Vector2(rb.velocity.x, 1f * jumpForce);
         }
 
-        if (jumpInput > 0 && isJumping)
+        if (jumpInput > 0 && !isJumping)
         {
             if (jumpHoldTime > 0)
             {
@@ -96,5 +96,10 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
 
         }
+    }
+
+    public bool IsJumping()
+    {
+        return isJumping;
     }
 }
